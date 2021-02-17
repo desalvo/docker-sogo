@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+OPTS=${MEMCACHED_OPTIONS:--p 11211 -u memcached -m 64 -c 1024 -l 127.0.0.1}
+echo "MEMCACHED options: $OPTS"
+exec /usr/bin/memcached $OPTS

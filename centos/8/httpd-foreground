@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# Apache gets grumpy about PID files pre-existing
+rm -f /etc/httpd/run/httpd.pid
+
+echo "HTTPD options: $HTTPD_OPTIONS"
+exec httpd -DFOREGROUND $HTTPD_OPTIONS
