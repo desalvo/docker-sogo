@@ -1,4 +1,4 @@
-FROM centos:8
+FROM tgagor/centos:stream8
 LABEL maintainer="Alessandro.DeSalvo@roma1.infn.it"
 
 RUN useradd -ms /bin/bash sogo
